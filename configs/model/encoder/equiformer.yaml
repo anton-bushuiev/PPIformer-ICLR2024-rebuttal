@@ -1,0 +1,25 @@
+_target_: equiformer_pytorch.Equiformer
+dim: [128, 64]
+dim_in: ${..input_dim}
+num_degrees: 2
+input_degrees: 2
+heads: 2
+dim_head: [32, 16]
+depth: 2
+valid_radius: 8  # 32 / 4.0 (EquiFold value / RFdiffusion coord normalization)
+num_neighbors: 10
+num_edge_tokens: 2
+edge_dim: 16  # TODO Ablate
+
+# reduce_dim_out: False
+# radial_hidden_dim: 64
+# num_tokens: null
+# num_positions: null
+# attend_self: True
+# splits: 4
+# linear_out: True  # TODO Understand
+# embedding_grad_frac: 0.5
+# single_headed_kv: False          # whether to do single headed key/values for dot product attention, to save on memory and compute
+# ff_include_htype_norms: False    # whether for type0 projection to also involve norms of all higher types, in feedforward first projection. this allows for all higher types to be gated by other type norms
+# l2_dist_attention: True          # turn to False to use MLP attention as proposed in paper, but dot product attention with -cdist similarity is still far better and i haven't even rotated distances (rotary embeddings) into the type 0 features yet
+reversible: false   

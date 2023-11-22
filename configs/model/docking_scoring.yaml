@@ -1,0 +1,9 @@
+defaults:
+  - default
+
+_target_: ppiformer.tasks.graph.GraphRegressionPPIformer
+label_attr: "fnat"
+pooling_kind: "mean"
+classification_threshold: 0.3
+regressor_hidden_channels: 128
+regressor_num_layers: 1

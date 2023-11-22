@@ -1,0 +1,22 @@
+# @package _global_
+
+defaults:
+  - override /trainer: ddp  
+  - override /model: docking_scoring
+  - override /model/encoder: equiformer
+  - override /dataloader@train_dataloader:
+    - train
+    - docking_scoring
+  - override /dataloader@val_dataloader:
+    - val
+    - docking_scoring
+
+train_dataloader:
+  dataset: "bm5,32"
+  batch_size: ???
+val_dataloader:
+  dataset: "bm5,8"
+  batch_size: ???
+
+project_name: "DOCKING_SCORING"
+run_name: "no_name_run"
