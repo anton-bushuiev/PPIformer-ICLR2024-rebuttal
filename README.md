@@ -6,7 +6,7 @@ To install, run the following command from the root of the directory (it assumes
 ```
 . scripts/installation/install.sh
 ```
-You may also want to download the pre-trained models for ddG prediction from [zenodo](https://zenodo.org/records/10183718).
+You may also want to download the pre-trained models for ddG prediction from [zenodo](https://zenodo.org/records/10183718) and place them under `./weights/ddg_regression`.
 
 
 Then, to reproduce the test results from the paper, you can run
