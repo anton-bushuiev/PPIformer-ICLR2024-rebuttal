@@ -18,8 +18,8 @@ pip install equiformer-pytorch==0.3.9
 pip install wandb
 pip install hydra-core
 pip install -U hydra-submitit-launcher
-pip install -e ../PPIRef
-pip install -e ../mutils
+pip install -e ../PPIRef-ICLR2024-rebuttal.git
+pip install -e ../mutils-ICLR2024-rebuttal-.git
 
 # Install current project
 pip install -e .
